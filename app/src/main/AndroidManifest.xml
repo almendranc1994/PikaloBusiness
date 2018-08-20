@@ -43,7 +43,7 @@
             android:name=".MapsActivitySearchLocation"
             android:label="@string/title_activity_maps_search_location" />
         <activity android:name=".SignUpStep3" />
-        <activity android:name=".offer_upload"></activity>
+        <activity android:name=".Offer_upload"></activity>
     </application>
 
 </manifest>

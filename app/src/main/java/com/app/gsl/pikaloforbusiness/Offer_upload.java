@@ -3,7 +3,7 @@ package com.app.gsl.pikaloforbusiness;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class offer_upload extends AppCompatActivity {
+public class Offer_upload extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

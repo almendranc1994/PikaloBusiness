@@ -10,12 +10,13 @@ public class Business implements Serializable {
     private String password;
     private String typeBusiness;
     private String idPlace;
+    private String score;
 
     public Business(){
 
     }
 
-    public Business(String businessName, String category, String description, String email, String password, String typeBusiness, String idPlace){
+    public Business(String businessName, String category, String description, String email, String password, String typeBusiness, String idPlace, String score){
         this.setBusinessName(businessName);
         this.setCategory(category);
         this.setDescription(description);
@@ -23,6 +24,7 @@ public class Business implements Serializable {
         this.setPassword(password);
         this.setTypeBusiness(typeBusiness);
         this.setIdPlace(idPlace);
+        this.setScore(score);
     }
 
     public String getBusinessName() {
@@ -79,5 +81,13 @@ public class Business implements Serializable {
 
     public void setIdPlace(String idPlace) {
         this.idPlace = idPlace;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
     }
 }

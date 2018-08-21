@@ -58,7 +58,7 @@ public class SignIn extends AppCompatActivity {
 
                             if(business.getPassword().equals(edtPassword.getText().toString())){
                                 Toast.makeText(SignIn.this, "Sign in successfully !", Toast.LENGTH_SHORT).show();
-                                Intent addOffer = new Intent(SignIn.this, OfferUploadStep3.class);
+                                Intent addOffer = new Intent(SignIn.this, Offer_upload.class);
                                 startActivity(addOffer);
                             }
                             else{

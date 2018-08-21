@@ -63,32 +63,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/ly1"
-        android:layout_above="@id/ly2"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_above="@id/progress_bar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ly2"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary" />
 
     <LinearLayout
         android:id="@+id/ly2"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:weightSum="3"
+        android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/button_upload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:layout_weight="0"
             android:text="Upload"
             android:textColor="@android:color/holo_purple" />
 
@@ -96,8 +98,8 @@
             android:id="@+id/btnCreateOfferStep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:layout_weight="0"
             android:text="Next Step"
             android:textColor="@android:color/holo_purple" />
 

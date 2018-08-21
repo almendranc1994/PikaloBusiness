@@ -73,7 +73,7 @@ public class SignUpStep3 extends AppCompatActivity {
                             Toast.makeText(SignUpStep3.this, "Business already register", Toast.LENGTH_SHORT).show();
                         }else{
                             mDialog.dismiss();
-                            Business newBusiness = new Business(business.getBusinessName(), business.getCategory(), business.getDescription(), txtEmail.getText().toString(), txtPassword.getText().toString(), business.getTypeBusiness(), business.getIdPlace());
+                            Business newBusiness = new Business(business.getBusinessName(), business.getCategory(), business.getDescription(), txtEmail.getText().toString(), txtPassword.getText().toString(), business.getTypeBusiness(), business.getIdPlace(), "0");
                             table_business.child(txtUsername.getText().toString()).setValue(newBusiness);
                             Toast.makeText(SignUpStep3.this, "Sign up successfully", Toast.LENGTH_SHORT).show();
                             finish();

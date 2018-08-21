@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfferUploadStep3">
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/stateProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@android:color/holo_purple"
+        app:spb_currentStateNumber="three"
+        app:spb_maxStateNumber="three"
+        app:spb_stateBackgroundColor="#BDBDBD"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_stateForegroundColor="@android:color/holo_purple"
+        app:spb_stateNumberBackgroundColor="#808080"
+        app:spb_stateNumberForegroundColor="#eeeeee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        android:id="@+id/ly1"
+        >
+
+        <Button
+            android:id="@+id/button_choose_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:text="CHOOSE IMAGE"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_text_file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:hint="Description"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ly1"
+        android:layout_above="@id/ly2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/ly2"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/button_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Upload"
+            android:textColor="@android:color/holo_purple" />
+
+        <Button
+            android:id="@+id/btnCreateOfferStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Next Step"
+            android:textColor="@android:color/holo_purple" />
+
+    </LinearLayout>
+
+</RelativeLayout>

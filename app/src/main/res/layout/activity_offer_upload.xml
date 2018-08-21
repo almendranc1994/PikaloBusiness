@@ -6,11 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Offer_upload">
 
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/stateProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@android:color/holo_purple"
+        app:spb_currentStateNumber="one"
+        app:spb_maxStateNumber="three"
+        app:spb_stateBackgroundColor="#BDBDBD"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_stateForegroundColor="@android:color/holo_purple"
+        app:spb_stateNumberBackgroundColor="#808080"
+        app:spb_stateNumberForegroundColor="#eeeeee" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="419dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="70dp"
         android:orientation="vertical">
 
         <TextView
@@ -19,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="Fill the information and publish your offer ... So simple!"
             android:textColor="@android:color/darker_gray"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
 
         <EditText
@@ -52,7 +68,7 @@
             android:weightSum="2">
 
             <Spinner
-                android:id="@+id/typeOffer"
+                android:id="@+id/typePay"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -61,93 +77,17 @@
                 android:textColorHint="#05ab9a" />
 
             <EditText
-                android:id="@+id/edtPrice"
+                android:id="@+id/edtRealPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:hint="Description"
+                android:hint="Real Price"
                 android:inputType="text"
                 android:text=""
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Sice: "
-                android:inputType="text"
-                android:text=""
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/black"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/dayOfferStart"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Category"
-                android:textColorHint="#05ab9a" />
-
-            <Spinner
-                android:id="@+id/mothOfferStart"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Category"
-                android:textColorHint="#05ab9a" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Until: "
-                android:inputType="text"
-                android:text=""
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/black"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/dayOfferEnd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Category"
-                android:textColorHint="#05ab9a" />
-
-            <Spinner
-                android:id="@+id/mothOfferEnd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Category"
-                android:textColorHint="#05ab9a" />
         </LinearLayout>
 
         <LinearLayout
@@ -157,57 +97,45 @@
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <Button
-                android:id="@+id/button_choose_file"
+            <Spinner
+                android:id="@+id/typeOffer"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:inputType="text"
-                android:text="CHOOSE FILE"
-                android:textColor="@android:color/black"
-                android:textColorHint="@android:color/black"
-                android:textSize="20sp" />
+                android:hint="Category"
+                android:textColorHint="#05ab9a" />
 
             <EditText
-                android:id="@+id/edit_text_file_name"
+                android:id="@+id/edtOfferPrice"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:hint="Description"
+                android:hint="Ofer Price"
                 android:inputType="text"
                 android:text=""
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:textSize="20sp" />
-
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:weightSum="2">
-
-        <ProgressBar
-            android:id="@+id/progress_bar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@color/colorPrimary"/>
+        android:layout_alignParentBottom="true"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btnCreateOffer"
+            android:id="@+id/btnCreateOfferStep1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:text="Create Offer"
+            android:text="Next Step"
             android:textColor="@android:color/holo_purple" />
     </LinearLayout>
 

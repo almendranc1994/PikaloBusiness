@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfferUploadStep2">
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/stateProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_checkStateCompleted="true"
+        app:spb_currentStateDescriptionColor="@android:color/holo_purple"
+        app:spb_currentStateNumber="two"
+        app:spb_maxStateNumber="three"
+        app:spb_stateBackgroundColor="#BDBDBD"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_stateForegroundColor="@android:color/holo_purple"
+        app:spb_stateNumberBackgroundColor="#808080"
+        app:spb_stateNumberForegroundColor="#eeeeee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <EditText
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Since: "
+            android:inputType="text"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/dayOfferStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Day"
+            android:textColorHint="#05ab9a" />
+
+        <Spinner
+            android:id="@+id/mothOfferStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Month"
+            android:textColorHint="#05ab9a" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="250dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Until: "
+            android:inputType="text"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/dayOfferEnd"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Day"
+            android:textColorHint="#05ab9a" />
+
+        <Spinner
+            android:id="@+id/mothOfferEnd"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Month"
+            android:textColorHint="#05ab9a" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="350dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <EditText
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint="Stock: "
+            android:inputType="text"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/stockOffer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:hint=""
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnCreateOfferStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="Next Step"
+            android:textColor="@android:color/holo_purple" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.app.gsl.pikaloforbusiness.Model.Business;
 import com.app.gsl.pikaloforbusiness.Model.Offer;
 import com.kofigyan.stateprogressbar.StateProgressBar;
 
@@ -16,6 +17,7 @@ public class Offer_upload extends AppCompatActivity {
     public static final String TAG = SignUp.class.getSimpleName();
     String[] type = {"Soles", "%"};
     String[] descriptionData = {"Offer Info", "Time", "Images"};
+    private String businessID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class Offer_upload extends AppCompatActivity {
         arrayAdapterTypeBusiness.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         final Spinner spinnerType = (Spinner) findViewById(R.id.typeOffer);
         spinnerType.setAdapter(arrayAdapterTypeBusiness);
+
+        businessID = (String) getIntent().getSerializableExtra("businessID");
 
         Button btnNext = (Button)findViewById(R.id.btnCreateOfferStep1);
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +50,7 @@ public class Offer_upload extends AppCompatActivity {
                 offer.setDescription(txtDescription.getText().toString());
                 offer.setRealPrice(txtRealPrice.getText().toString());
                 offer.setOfferPrice(txtOfferPrice.getText().toString() + " " + typeSelected);
+                offer.setBusinessID(businessID);
 
                 Intent offerUploadStep2 = new Intent(Offer_upload.this, OfferUploadStep2.class);
                 offerUploadStep2.putExtra("offer", offer);

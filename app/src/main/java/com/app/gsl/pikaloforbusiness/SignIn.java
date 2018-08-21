@@ -55,10 +55,12 @@ public class SignIn extends AppCompatActivity {
                             Log.i(TAG, "               " + business.getTypeBusiness());
                             Log.i(TAG, "               " + business.getIdPlace());
                             Log.i(TAG, "               " + business.getPassword());
+                            Log.i(TAG, "               " + business.getScore());
 
                             if(business.getPassword().equals(edtPassword.getText().toString())){
                                 Toast.makeText(SignIn.this, "Sign in successfully !", Toast.LENGTH_SHORT).show();
                                 Intent addOffer = new Intent(SignIn.this, Offer_upload.class);
+                                addOffer.putExtra("businessID", edtUsername.getText().toString());
                                 startActivity(addOffer);
                             }
                             else{

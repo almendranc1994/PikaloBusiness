@@ -43,19 +43,6 @@
             android:textColorHint="@android:color/black"
             android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/edit_text_file_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:hint="Description"
-            android:inputType="text"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="20sp" />
-
     </LinearLayout>
 
     <ImageView
@@ -92,15 +79,6 @@
             android:layout_margin="0dp"
             android:layout_weight="0"
             android:text="Upload"
-            android:textColor="@android:color/holo_purple" />
-
-        <Button
-            android:id="@+id/btnCreateOfferStep1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="0dp"
-            android:layout_weight="0"
-            android:text="Next Step"
             android:textColor="@android:color/holo_purple" />
 
     </LinearLayout>

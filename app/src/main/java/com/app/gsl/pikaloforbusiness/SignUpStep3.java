@@ -49,10 +49,6 @@ public class SignUpStep3 extends AppCompatActivity {
         final EditText txtEmail = (EditText)findViewById(R.id.edtEmail);
         final EditText txtPassword = (EditText)findViewById(R.id.edtPassword);
 
-        business.setEmail(txtEmail.getText().toString());
-        business.setPassword(txtPassword.getText().toString());
-        final String username = txtUsername.getText().toString();
-
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_business = database.getReference("Business");
 
@@ -63,6 +59,10 @@ public class SignUpStep3 extends AppCompatActivity {
                 final ProgressDialog mDialog = new ProgressDialog(SignUpStep3.this);
                 mDialog.setMessage("Please waiting ...");
                 mDialog.show();
+
+                business.setEmail(txtEmail.getText().toString());
+                business.setPassword(txtPassword.getText().toString());
+                final String username = txtUsername.getText().toString();
 
                 table_business.addValueEventListener(new ValueEventListener() {
                     @Override

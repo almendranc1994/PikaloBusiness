@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,8 +12,11 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.app.gsl.pikaloforbusiness.Model.Offer;
+
 public class OfferUploadStep3 extends AppCompatActivity {
 
+    public static final String TAG = SignUpStep3.class.getSimpleName();
     private static final int PICK_IMAGE_REQUEST = 1;
     private Button mButtonChooseImage;
     private Button mButtonUpload;
@@ -22,11 +26,22 @@ public class OfferUploadStep3 extends AppCompatActivity {
     private TextView mTextViewShowUploads;
 
     private Uri mImageUri;
+    private Offer offer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer_upload_step3);
+
+        offer = (Offer) getIntent().getSerializableExtra("offer");
+        Log.i(TAG, "Data recieved: ");
+        Log.i(TAG, "               " + offer.getName());
+        Log.i(TAG, "               " + offer.getDescription());
+        Log.i(TAG, "               " + offer.getRealPrice());
+        Log.i(TAG, "               " + offer.getOfferPrice());
+        Log.i(TAG, "               " + offer.getStartDate());
+        Log.i(TAG, "               " + offer.getFinishDate());
+        Log.i(TAG, "               " + offer.getStock());
 
         mButtonChooseImage = (Button) findViewById(R.id.button_choose_image);
         mButtonUpload = (Button)findViewById(R.id.button_upload);

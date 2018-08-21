@@ -67,15 +67,6 @@
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <Spinner
-                android:id="@+id/typePay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Category"
-                android:textColorHint="#05ab9a" />
-
             <EditText
                 android:id="@+id/edtRealPrice"
                 android:layout_width="0dp"
@@ -88,6 +79,16 @@
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:text="Soles"
+                android:textSize="30dp"
+                 />
+
         </LinearLayout>
 
         <LinearLayout
@@ -96,15 +97,6 @@
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:weightSum="2">
-
-            <Spinner
-                android:id="@+id/typeOffer"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:hint="Category"
-                android:textColorHint="#05ab9a" />
 
             <EditText
                 android:id="@+id/edtOfferPrice"
@@ -118,6 +110,16 @@
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/typeOffer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:hint="Category"
+                android:textColorHint="#05ab9a" />
+
         </LinearLayout>
 
     </LinearLayout>
